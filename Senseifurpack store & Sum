@@ -1,0 +1,20 @@
+CREATE TABLE senseifurpack ( id INTEGER PRIMARY KEY, items TEXT, price NUMERIC); 
+
+
+INSERT INTO senseifurpack VALUES ( 1, "dog collar ", 5.99) ;
+INSERT INTO senseifurpack VALUES ( 2, "cat collar ", 2.49) ; 
+INSERT INTO senseifurpack VALUES ( 3, "dog harness", 9.99) ;
+INSERT INTO senseifurpack VALUES ( 4, "cat harness S", 5.99) ;
+INSERT INTO senseifurpack VALUES ( 5, "leash", 10.99) ;
+INSERT INTO senseifurpack VALUES ( 6, "food bowl", 10.29) ;
+INSERT INTO senseifurpack VALUES ( 7, "bed", 60.13) ;
+INSERT INTO senseifurpack VALUES ( 8, "boots", 23.69) ;
+INSERT INTO senseifurpack VALUES ( 9, "vitamins", 11.89) ;
+INSERT INTO senseifurpack VALUES ( 10, "omega supplement", 12.97) ;
+INSERT INTO senseifurpack VALUES ( 11, "joint supplement", 6.79) ;
+INSERT INTO senseifurpack VALUES ( 12, "food", 10.97) ;
+INSERT INTO senseifurpack VALUES ( 13, "treats", 9.57) ;
+INSERT INTO senseifurpack VALUES ( 14, "pouch", 15.97) ;
+INSERT INTO senseifurpack VALUES ( 15, "toys", 8.69) ;
+
+SELECT SUM(price) FROM senseifurpack ORDER BY price;
