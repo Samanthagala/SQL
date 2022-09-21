@@ -1,0 +1,68 @@
+/* Travel from florida to other states */
+CREATE TABLE travel (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    state TEXT,
+    distance INTEGER,
+    time REAL);
+    
+INSERT INTO travel (state, distance, time)
+    VALUES ("Georgia", 272, 4.35);
+INSERT INTO travel (state, distance, time)
+    VALUES ("South Carolina", 391, 5.49);
+INSERT INTO travel (state, distance, time)
+    VALUES ("North Carolina", 551, 8.23);
+INSERT INTO travel (state, distance, time)
+    VALUES ("Alabama", 466, 8.10);
+INSERT INTO travel (state, distance, time)
+    VALUES ("Utah", 2236, 35);
+INSERT INTO travel (state, distance, time)
+    VALUES ("Colorado", 1889, 29.00);
+INSERT INTO travel (state, distance, time)
+    VALUES ("New York", 1042, 16.27);
+INSERT INTO travel (state, distance, time)
+    VALUES ("West Virginia", 799, 12.23);
+
+
+CREATE TABLE favorite (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    state TEXT,
+    rating INTEGER);
+    
+INSERT INTO favorite (state, rating)
+    VALUES ("Georgia", 5);
+INSERT INTO favorite (state, rating)
+    VALUES ("South Carolina", 6);
+INSERT INTO favorite (state, rating)
+    VALUES ("North Carolina", 6);
+INSERT INTO favorite (state, rating)
+    VALUES ("Alabama", 3);
+INSERT INTO favorite (state, rating)
+    VALUES ("Utah", 9);
+INSERT INTO favorite (state, rating)
+    VALUES ("Colorado", 8);
+INSERT INTO favorite (state, rating)
+    VALUES ("New York", 4);
+INSERT INTO favorite (state, rating)
+    VALUES ("West Virginia", 7);    
+    
+    
+/*select all travel*/
+
+SELECT * FROM travel;
+
+/* select all favorites*/
+ 
+SELECT * FROM favorite;
+
+/* states highest rated*/
+
+SELECT * FROM Favorite WHERE rating < 6;
+
+/*lowest distance*/
+
+SELECT * FROM travel WHERE distance < 650 AND time < 6;
+
+/*rated same*/
+SELECT * FROM favorite WHERE rating = 6;
+
+
